@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjetoFinal</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjetoFinal.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 header">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Instrumentos" asp-action="Index">Eagle IM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <nav class="navbar bg-body-tertiary">
+                        <div class="container-fluid">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+            <div id="pages">
+                <a href="/Instrumentos/Orgao">Órgão</a>
+                <a href="/Instrumentos/Madeiras">Madeiras</a>
+                <a href="/Instrumentos/Metais">Metais</a>
+                <a href="/Instrumentos/Cordas">Cordas</a>
+                <a href="/Instrumentos/Teclas">Teclas</a>
+                <a href="/Instrumentos/Percussao">Percussão</a>
+            </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-4">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div id="formasPagamento">
+            <h3>Formas de Pagamento</h3>
+            <img src="~/img/FormasPagamento.png" alt="Formas de Pagamento" class="payment-icon" />
+        </div>
+        <div id="meio">
+            <div id="institucional">
+                <h3>Institucional</h3>
+                <a href="#">Quem Somos</a>
+                <a href="#">Assitência Técnica</a>
+                <a href="#">Formas de Pagamento</a>
+                <a href="#">Depoimento dos Clientes</a>
+                <a href="#">Notícias</a>
+                <a href="#">Trocas e Devoluções</a>
+                <a href="#">Entrega</a>
+                <a href="#">Fale Conosco</a>
+            </div>
+            <div id="pages" class="categorias">
+                <h3>Categorias</h3>
+                <a href="/Instrumentos/Orgao">Órgão</a>
+                <a href="/Instrumentos/Madeiras">Madeiras</a>
+                <a href="/Instrumentos/Metais">Metais</a>
+                <a href="/Instrumentos/Cordas">Cordas</a>
+                <a href="/Instrumentos/Teclas">Teclas</a>
+                <a href="/Instrumentos/Percussao">Percussão</a>
+            </div>
+        </div>
+            &copy; 2026 - ProjetoFinal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
