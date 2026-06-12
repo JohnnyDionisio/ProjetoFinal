@@ -200,6 +200,9 @@ footer.footer {
     align-items: center;
     gap: 30px;
 }
+footer.footer h3 {
+    color: darkgray;
+}
 
 #formasPagamento {
     display: flex;
