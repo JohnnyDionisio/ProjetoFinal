@@ -5,7 +5,7 @@ namespace ProjetoFinal.Controllers
 {
     public class InstrumentosController : Controller
     {
-        public IActionResult Index()
+        public IActionResult index()
         {
             return View();
         }
